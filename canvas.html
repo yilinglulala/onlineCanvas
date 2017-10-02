@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5在线画布</title>
+		<link rel="stylesheet" href="canvas.css" type="text/css"/>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<header id="header">HTML5在线画板</head>
+		<section id="content">
+			<ul id="tool">
+				<li>
+					<ul id="means">
+						<li id="meansBrush" onclick="drawBrush(0)"><img src="img/huabi-01.png"></li>
+						<li id="meansEraser" onclick="drawEraser(1)"><img src="img/xiangpi-01.png"></li>
+						<li id="meansPaint" onclick="drawPaint(2)"><img src="img/youxitong-01.png"></li>
+						<li id="meansStraw" onclick="drawStraw(3)"><img src="img/xiguan-01.png"></li>
+						<li id="meansText" onclick="drawText(4)"><img src="img/wenzi-01.png"></li>
+						<li id="meansMagnifier" onclick="drawMagnifier(5)"><img src="img/fangdajing-01.png"></li>
+						<li id="meansFill" onclick="drawFill(0)"><img src="img/wujiaoxingf-01.png"></li>
+						<li id="meansStroke" onclick="drawStroke(1)"><img src="img/wujiaoxing-01.png"></li>
+					</ul>
+				</li>
+				<li>
+					<!-- <h3>形状</h3><hr /> -->
+					<ul id="shape">
+						<li id="shapeLine" onclick="drawLine(6)"><img src="img/zhixian-01.png"></li>
+						<li id="shapeArc" onclick="drawArc(7)"><img src="img/yuanxing-01.png"></li>
+						<li id="shapePoly" onclick="drawPoly(8)"><img src="img/sanjiaoxing-01.png"></li>
+						
+						<li id="shapeRect" onclick="drawRect(9)"><img src="img/juxing-01.png"></li>
+						<li id="shapeSnow" onclick="drawSnowFun(10)"><img src="img/snow-01.png"></li>
+						<li id="shapeShan" onclick="drawShan(11)"><img src="img/shanxing-01.png"></li>
+						<li id="shapeQu" onclick="drawWu(12)"><img src="img/wujiaoxing-01.png"></li>
+						<li id="shapeLiu" onclick="drawLiu(13)"><img src="img/liubianxing-01.png"></li>
+					</ul>
+				</li>
+				
+				<li>
+					<!-- <h3>颜色</h3><hr /> -->
+					<ul id="color">
+						<li id="red" onclick="setColor(this,0)"></li>
+						<li id="green" onclick="setColor(this,1)"></li>
+						<li id="blue" onclick="setColor(this,2)"></li>
+						<li id="yellow" onclick="setColor(this,3)"></li>
+						<li id="cyan" onclick="setColor(this,4)"></li>
+						<li id="pink" onclick="setColor(this,5)"></li>
+						<li id="purple" onclick="setColor(this,6)"></li>
+						<li id="black" onclick="setColor(this,7)"></li>
+						<li id="white" onclick="setColor(this,8)"></li>
+						<li id="gray" onclick="setColor(this,9)"></li>
+					</ul>
+				</li>
+				<li>
+					<!-- <h3>粗细</h3><hr /> -->
+					<ul id="lineWidth">
+						<li >
+							<select  id="lineWidthSelect" onchange="test(this)">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+            					<option value="7">7</option>
+            					<option value="8">8</option>
+							</select>
+						</li>
+						<li id="btnsave">
+							<form id="myform" action="http://localhost:8080/down.php" method="post">
+								<input id="data" type="hidden" value="" name="data"></input>
+								<button onclick="saveimg()">保存图片</button>
+							</form>
+						</li>
+						<li><input type="color" id="colorSelectf" onchange="test1(this)"></input>
+							<input type="color" id="colorSelect" onchange="test2(this)"></input>
+						</li>
+						<li id="btnclear"><button onclick="clearimg()">清除画布</button></li>
+					</ul>
+				</li>
+			</ul>
+			<canvas id="canvas" width="880" height="430" >
+				您的浏览器不支持canvas标签
+			</canvas>
+
+			<!-- 请在canvas标签之后连入js文件 -->
+			<script type="text/javascript" src="canvas.js"></script>
+		</section>
+		<footer id="footer">@copyright 数字媒体技术  HTML5在线画板</footer>
+	</body>
+</html>
