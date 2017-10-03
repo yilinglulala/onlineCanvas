@@ -29,16 +29,16 @@ var cxt=canvas.getContext('2d');
 	var lineWidth_4=document.getElementById("lineWidth4");
 
 	// 获取颜色按钮
-	var red=$("#red");
-	var green=$("#green");
-	var blue=$("#blue");
-	var yellow=$("#yellow");
-	var cyan=$("#cyan");
-	var pink=$("#pink");
-	var purple=$("#purple");
-	var black=$("#black");
-	var white=$("#white");
-	var gray=$("#gray");
+	var red=document.getElementById("red");//$("#red");
+	var green=document.getElementById("green");//$("#green");
+	var blue=document.getElementById("blue");//$("#blue");
+	var yellow=document.getElementById("yellow");//$("#yellow");
+	var cyan=document.getElementById("cyan");//$("#cyan");
+	var pink=document.getElementById("pink");//$("#pink");
+	var purple=document.getElementById("purple");//$("#purple");
+	var black=document.getElementById("black");//$("#black");
+	var white=document.getElementById("white");//$("#white");
+	var gray=document.getElementById("gray");//$("#gray");
 
 	//创建颜色数组
 	var colors=[red,green,blue,yellow,cyan,pink,purple,black,white,gray];
