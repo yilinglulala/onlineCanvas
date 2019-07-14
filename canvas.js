@@ -141,15 +141,22 @@ var cxt=canvas.getContext('2d');
 	}
 	// 设置图像功能函数保存图像
 	function saveimg(){
-		var imgdata=canvas.toDataURL();
-		var b64=imgdata.substring(22);
-		// alert(imgdata);
-		//将隐藏表单赋值
-		var data=document.getElementById('data');
-		data.value=b64;
-		// 将表单提交到后台
-		var form=document.getElementById('myform');
-		form.submit();
+// 		var imgdata=canvas.toDataURL();
+// 		var b64=imgdata.substring(22);
+// 		// alert(imgdata);
+// 		//将隐藏表单赋值
+// 		var data=document.getElementById('data');
+// 		data.value=b64;
+// 		// 将表单提交到后台
+// 		var form=document.getElementById('myform');
+// 		form.submit();
+		var imgDataUrl=canvas.toDataURL();
+		var aLink = document.createElement("a");
+		    aLink.download = '';// 设置下载的文件名，默认是'下载'
+		    aLink.href = imgDataUrl;
+		    document.body.appendChild(aLink);
+		    aLink.click();
+		    aLink.remove(); // 下载之后把创建的元素删除
 	}
 	function clearimg(){//清空画布
 		cxt.clearRect(0,0,880,430);
